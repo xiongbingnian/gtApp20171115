@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-学生首页</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="head_box">
+            <img class="img_head" src="../img/studentHead.png" alt="">
+            <span class="btn_exit">退出</span>
+        </div>
+        <div class="info_box">
+            <div>
+                <span>
+                    <b class="student_name">谢会如</b>
+                </span>
+                <a class="right integral">
+                    <span>50</span>
+                </a>
+            </div>
+            <ul class="studentInfo_list">
+                <li>班级：13级人文学1班</li>
+                <li>实习课程：人文学实习课程1</li>
+                <li>指导老师： <a class="teacher_name" href="javascript:;">张曼玉</a></li>
+                <li>实习成绩：无</li>
+            </ul>
+        </div>
+        <div class="queryLocation_box">
+            <a id="myQuery">
+                <i class="i_query"></i>
+                <b class="redDot_query"></b>
+            </a>
+        </div>
+        <div class="location_box">
+            <span class="btn_signIn">签到</span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <p class="remind"><a href="javascript:;"><i class="i_remind"></i> <span class="remind_content">您当前还没有录入实习信息，请录入实习信息</span></a><i class="i_close"></i></p>
+    <section>
+        <div class="module_box">
+            <p  class="inform"><span class="subtitle">通知公告</span> <a><i class="i_allSubtitle"></i></a></p>
+            <div class="inform_box">
+                <ul class="inform_list">
+                    <li class="inform"><a><span class="subtitle_title">【3.1】关于本学期顶岗实习教学计划的通知</span></a></li>
+                    <li class="inform"><a><span class="subtitle_title">【3.1】关于本学期顶岗实习教学计划的通知</span></a></li>
+                    <li class="inform"><a><span class="subtitle_title">【3.1】关于本学期顶岗实习教学计划的通知</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="module_box">
+            <p><span class="subtitle">我的日常</span></p>
+            <ul class="menu_list">
+                <li>
+                    <a class="signIn" id="signIn">
+                        <i class="i_signIn"></i>
+                        <div>签到</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="daily">
+                        <i class="i_daily"></i>
+                        <div>日报</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="weekly">
+                        <i class="i_weekly"></i>
+                        <div>周报</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="monthly">
+                        <i class="i_monthly"></i>
+                        <div>月报</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="recruit">
+                        <i class="i_recruit"></i>
+                        <div>实习招聘</div>
+                        <b class="num">99+</b>
+                    </a>
+                </li>
+                <li>
+                    <a id="info">
+                        <i class="i_info"></i>
+                        <div>实习信息</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="decisionTable">
+                        <i class="i_decisionTable"></i>
+                        <div>实习鉴定表</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="myRating">
+                        <i class="i_evaluate"></i>
+                        <div>我的评价</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="myMessage">
+                        <i class="i_messageBoard"></i>
+                        <div>留言板</div>
+                        <b class="num">1</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <img class="banner" src="../img/banner.png" alt="">
+    </section>
+    <footer>
+        <p>2016©广州轩辕云岗信息科技有限公司 </p>
+    </footer>
+    <!--退出登录弹窗-->
+    <div class="popup exit_popup">
+        <div class="mask"></div>
+        <div class="exit_box">
+            <a id="logIn"><span class="btn_logOut">退出登录</span></a>
+            <span class="btn_cancel">取消</span>
+        </div>
+    </div>
+    <!--签到弹窗-->
+    <div class="popup signIn_pop">
+        <div class="mask"></div>
+        <div class="signIn_main">
+    		<h3>签到</h3>
+    		<p><img alt="" src="../img/i_yesSignIn.png">正在检测定位是否开启......</p>
+    		<p><img alt="" src="../img/i_yesSignIn.png">正在签到......</p>
+    		<p class="i_yes"><img alt="" src="../img/i_yesSignIn.png">签到成功！</p>
+    		<p class="i_no"><img alt="" src="../img/i_noSignIn.png">签到失败！</p>
+    		<div class="signIn_s_box">
+    			<img src="../img/success_img.png"/>
+    			<p style="color:red">签到成功！</p>
+    			<p >今天第1次签到（2次/天）</p>
+    		</div>
+    		<div class="signIn_l_box">
+    			<img src="../img/lose_img.png"/>
+    			<p style="color:red">签到失败！请点击签到按钮重试</p>
+    			<span class="btn btn_signIn_FF853B" >签到</span>
+    		</div>
+    		<span class="btn_popClose">关闭</span>
+        </div>
+    </div>
+    <div class="popup signIn_pop show">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>签到</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section">
+                   	<div class="signIn_main">
+			    		<p><img alt="" src="../img/i_yesSignIn.png">正在检测定位是否开启......</p>
+			    		<p><img alt="" src="../img/i_yesSignIn.png">正在签到......</p>
+			    		<p class="i_yes"><img alt="" src="../img/i_yesSignIn.png">签到成功！</p>
+			    		<p class="i_no"><img alt="" src="../img/i_noSignIn.png">签到失败！</p>
+			    		<!--签到成功-->
+			    		<div class="signIn_s_box hide">
+			    			<img src="../img/success_img.png"/>
+			    			<p class="red">签到成功！</p>
+			    			<p >今天第1次签到（2次/天）</p>
+			    		</div>
+			    		<!--签到失败-->
+			    		<div class="signIn_l_box">
+			    			<img src="../img/lose_img.png"/>
+			    			<p class="red">签到失败！请点击签到按钮重试</p>
+			    			<span class="btn btn_signIn_FF853B" >签到</span>
+			    		</div>
+			        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/commonJs/AppUtils.js"></script>
+<script src="../js/commonJs/CommonUtils.js"></script>
+<script src="../js/commonJs/LangUtils.js"></script>
+<script src="../js/studentJs/index.js"></script>
+</body>
+</html>

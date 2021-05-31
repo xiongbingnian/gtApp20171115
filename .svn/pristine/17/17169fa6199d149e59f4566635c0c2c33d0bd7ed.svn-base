@@ -1,0 +1,44 @@
+var AppUtils = au = {
+	initLoginInfo : function(loginInfo) {
+		localStorage.setItem('loginInfo', loginInfo ? JSON.stringify(loginInfo) : null);
+	},
+	/**
+	 * 获取用户信息
+	 */
+	getLoginInfo : function() {
+		var loginInfo = localStorage.getItem('loginInfo');
+		return loginInfo ? JSON.parse(loginInfo) : null;
+	},
+	initToken : function(token){
+		localStorage.setItem('tokenInfo', token);
+	},
+	/**
+	 * 获取token 每次请求都要带上token
+	 */
+	getTokenInfo : function(){
+		return localStorage.getItem('tokenInfo');
+	},
+	toLogin : function(first) {
+	},
+	verifyToken : function(){
+		return cu.sync("/sys/verify-token");
+	},
+	logout : function(){
+		localStorage.removeItem('loginInfo');
+		localStorage.removeItem('tokenInfo');
+	},
+	/**
+	 * 根据给定的主键id和实体类名，找出对应的实体对象
+	 * beanName 实体类名（domain包之后的部分，如sys.User, sys.Depart
+	 */
+	toBean: function(id, beanName){
+		return cu.sync({
+			url: '/sys/util/to-bean',
+			data:{
+				id:id,
+				beanName:beanName
+			}
+		});
+	}
+	//loginInfo:null
+};

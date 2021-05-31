@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-实习招聘</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle bg_border">实习招聘</p>
+        <ul class="recruit_list">
+            <li>
+                <a class="recruitPage">
+                    <h3>AR测试工程师 <span class="right color_F47474">5k-8k</span></h3>
+                    <h3 class="margin_tB">广州轩辕云岗信息科技有限公司</h3>
+                    <div>
+                        <span class="site"><i class="i_site"></i>广州</span>
+                        <span class="education"><i class="i_education"></i>大专</span>
+                        <span class="peopleNum"><i class="i_peopleNum"></i>3人</span>
+                        <span class="browseNum"><i class="i_browseNum"></i>78次</span>
+                        <span class="right date">03-17</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="recruitPage">
+                    <h3 class="color_">AR测试工程师 <span class="right color_F47474">5k-8k</span></h3>
+                    <h3 class="margin_tB">广州轩辕云岗信息科技有限公司</h3>
+                    <div>
+                        <span class="site"><i class="i_site"></i>广州</span>
+                        <span class="education"><i class="i_education"></i>大专</span>
+                        <span class="peopleNum"><i class="i_peopleNum"></i>3人</span>
+                        <span class="browseNum"><i class="i_browseNum"></i>78次</span>
+                        <span class="right date">03-17</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="recruitPage">
+                    <h3>AR测试工程师 <span class="right color_F47474">5k-8k</span></h3>
+                    <h3 class="margin_tB">广州轩辕云岗信息科技有限公司</h3>
+                    <div>
+                        <span class="site"><i class="i_site"></i>广州</span>
+                        <span class="education"><i class="i_education"></i>大专</span>
+                        <span class="peopleNum"><i class="i_peopleNum"></i>3人</span>
+                        <span class="browseNum"><i class="i_browseNum"></i>78次</span>
+                        <span class="right date">03-17</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/studentJs/recruit.js"></script>
+</body>
+</html>

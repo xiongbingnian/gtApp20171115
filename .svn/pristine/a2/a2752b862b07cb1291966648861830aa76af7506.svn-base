@@ -1,0 +1,101 @@
+//新增实习信息页面跳转
+mui(".info_subtitle").on("tap",".enteringInfo",function(){
+	mui.openWindow({
+		url:"enteringInfo.html",
+		show: {
+			aniShow: 'slide-in-right',
+			duration: 300
+		},
+		waiting:{
+	      autoShow:true,//自动显示等待框，默认为true
+	      title:'正在加载...',//等待对话框上显示的提示内容
+	    }
+	});
+});
+//编辑实习信息页面跳转
+mui(".newInfo_list").on("tap",".enteringInfo",function(){
+	mui.openWindow({
+		url:"enteringInfo.html",
+		show: {
+			aniShow: 'slide-in-right',
+			duration: 300
+		},
+		waiting:{
+	      autoShow:true,//自动显示等待框，默认为true
+	      title:'正在加载...',//等待对话框上显示的提示内容
+	    }
+	});
+});
+
+mui.ready(function(){
+	//获取实习信息
+	var info = cu.sync('/student/student-internship/list');
+	//用户token失效跳转到登录页面
+	if(lu.isNotEmpty(info.errMsg)){
+		au.logout();
+		mui.openWindow({
+			url:"../logIn.html",
+			show: {
+				aniShow: 'slide-in-right',
+				duration: 100
+			},
+			waiting:{
+		      autoShow:true,//自动显示等待框，默认为true
+		      title:'正在加载...',//等待对话框上显示的提示内容
+		    }
+		});
+		return;
+	}
+	
+	var infoCombo = $('#info');
+	infoCombo.empty().append('<p class="subtitle info_subtitle">实习信息 <a class="enteringInfo"><i class="i_newAdd"></i></a></p>');
+	mui(".info_subtitle").on("tap",".enteringInfo",function(){
+		mui.openWindow({
+			url:"enteringInfo.html",
+			show: {
+				aniShow: 'slide-in-right',
+				duration: 300
+			},
+			waiting:{
+		      autoShow:true,//自动显示等待框，默认为true
+		      title:'正在加载...',//等待对话框上显示的提示内容
+		    }
+		});
+	});
+	
+	if(lu.isNotEmpty(info) && lu.isNotEmpty(info.result)){
+		mui.each(info.result,function(index,item){
+			//log(item);
+			var newInfo_list_id = 'newInfo_list'+(index+1);
+			$(['<ul id="', newInfo_list_id,'" class="newInfo_list">',
+            '<li>',
+                '<span><label>实习单位：</label>', item.companyName ,'</span>',
+                '<span class="right info_date">', item.startEndWeek ,'</span>',
+            '</li>',
+            '<li>',
+                '<span><label>工作地点：</label>', item.address,'</span>',
+            '</li>',
+            '<li>',
+                '<span><label>实习岗位：</label>', item.post_name,'</span>',
+                '<div class="btnCompile_box">',
+                    0 == index ? '<a class="enteringInfo btn_compile">编辑</a>' : '',
+                '</div>',
+            '</li>',
+        	'</ul>'].join('')).appendTo(infoCombo);
+        	
+        	mui('#'+newInfo_list_id).on("tap",".enteringInfo",function(){
+				mui.openWindow({
+					url:"enteringInfo.html",
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					},
+					waiting:{
+				      autoShow:true,//自动显示等待框，默认为true
+				      title:'正在加载...',//等待对话框上显示的提示内容
+				    }
+				});
+			});
+		});
+	}
+});

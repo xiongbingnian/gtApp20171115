@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-通知公告</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <div class="fCentre">
+            <p class="subtitle">通知公告</p>
+            <ul class="informPage_list">
+                <li>
+                    <p class="inform_title"><i class="i_readMessage"></i><span class="inform_txt">关于本学期顶岗实习教学计划的通知关于本学期顶岗实习教学计划的通知</span><span class="right_date">03-07</span></p>
+                    <div class="inform_content on">
+                        <i class="i_ltAarrows"></i>
+                        <p>各相关院系师生：</p>
+                        <p class="inform_paragraph">本学期顶岗实习继续使用系统进行管理，请各单位按申报的计划开展实习管理工作。</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="inform_title"><i class="i_unreadMessage"></i><span class="inform_txt">关于本学期顶岗实习教学计划的通知</span><span class="right_date">03-07</span></p>
+                    <div class="inform_content hide">
+                        <i class="i_ltAarrows"></i>
+                        <p>各相关院系师生：</p>
+                        <p class="inform_paragraph">本学期顶岗实习继续使用系统进行管理，请各单位按申报的计划开展实习管理工作。</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="inform_title"><i class="i_unreadMessage"></i><span class="inform_txt">关于本学期顶岗实习教学计划的通知</span><span class="right_date">03-07</span></p>
+                    <div class="inform_content hide">
+                        <i class="i_ltAarrows"></i>
+                        <p>各相关院系师生：</p>
+                        <p class="inform_paragraph">本学期顶岗实习继续使用系统进行管理，请各单位按申报的计划开展实习管理工作。</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="inform_title"><i class="i_unreadMessage"></i><span class="inform_txt">关于本学期顶岗实习教学计划的通知</span><span class="right_date">03-07</span></p>
+                    <div class="inform_content hide">
+                        <i class="i_ltAarrows"></i>
+                        <p>各相关院系师生：</p>
+                        <p class="inform_paragraph">本学期顶岗实习继续使用系统进行管理，请各单位按申报的计划开展实习管理工作。</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="inform_title"><i class="i_unreadMessage"></i><span class="inform_txt">关于本学期顶岗实习教学计划的通知</span><span class="right_date">03-07</span></p>
+                    <div class="inform_content hide">
+                        <i class="i_ltAarrows"></i>
+                        <p>各相关院系师生：</p>
+                        <p class="inform_paragraph">本学期顶岗实习继续使用系统进行管理，请各单位按申报的计划开展实习管理工作。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+</body>
+</html>

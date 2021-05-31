@@ -1,0 +1,7 @@
+// 是否开启对模板输出语句自动编码功能。为 false 则关闭编码输出功能
+// escape 可以防范 XSS 攻击
+template.defaults.escape = false;
+
+template.defaults.imports.dateFormat = function(date, format) {
+	return lu.formatDateTime(date, format)
+};

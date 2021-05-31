@@ -1,0 +1,148 @@
+{
+  "logIn.html": {
+    "refer": [
+      "studentPage/index.html",
+      "teacherPage/index.html"
+    ],
+    "resources": [
+      "img/school.png",
+      "js/plugin/mui.js",
+      "js/plugin/jquery-1.11.3.min.js",
+      "img/password.png",
+      "img/account.png",
+      "css/common.css",
+      "js/commonJs/common.js",
+      "css/logIn.css",
+      "js/commonJs/logIn.js",
+      "img/logIn_bg.png"
+    ]
+  },
+  "studentPage/index.html": {
+    "refer": [
+      "studentPage/signIn.html",
+      "logIn.html",
+      "studentPage/daily.html",
+      "studentPage/info.html"
+    ],
+    "resources": [
+      "img/i_recruit.png",
+      "img/i_close.png",
+      "img/i_remind.png",
+      "img/banner.png",
+      "img/i_info.png",
+      "img/i_allSubtitle.png",
+      "img/i_evaluate.png",
+      "js/plugin/mui.min.js",
+      "js/studentJs/index.js",
+      "img/studentHead.png",
+      "img/i_yesSignIn.png",
+      "img/i_daily.png",
+      "img/i_signIn.png",
+      "css/index.css",
+      "img/i_query.png",
+      "img/i_messageBoard.png",
+      "img/i_decisionTable.png",
+      "img/lose_img.png",
+      "img/bg_integral.png",
+      "img/i_noSignIn.png",
+      "img/success_img.png",
+      "img/bg.png",
+      "img/i_monthly.png",
+      "img/i_weekly.png",
+      "css/common.css",
+      "js/commonJs/common.js",
+      "js/plugin/jquery-1.11.3.min.js"
+    ]
+  },
+  "studentPage/writeDaily.html": {
+    "resources": [
+      "img/i_del.png",
+      "img/no_checkbox.png",
+      "img/successful.png",
+      "img/imgVideoAdd.png",
+      "js/plugin/jquery-1.11.3.min.js",
+      "js/studentJs/daily.js",
+      "img/i_teacher.png",
+      "js/plugin/mui.min.js",
+      "css/page.css",
+      "img/logIn_bg.png",
+      "img/i_return.png",
+      "css/common.css",
+      "js/commonJs/common.js",
+      "img/bg_integral.png",
+      "img/bg.png",
+      "img/btn_play.png"
+    ],
+    "refer": []
+  },
+  "studentPage/daily.html": {
+    "resources": [
+      "img/i_return.png",
+      "img/i_teacher.png",
+      "js/studentJs/daily.js",
+      "img/right_arrows.png",
+      "img/left_arrows.png",
+      "css/page.css",
+      "img/bg_integral.png",
+      "img/bg.png",
+      "js/plugin/jquery-1.11.3.min.js",
+      "css/common.css",
+      "js/commonJs/common.js",
+      "js/plugin/mui.min.js"
+    ],
+    "refer": [
+      "studentPage/writeDaily.html",
+      "studentPage/teacherRemarkOn.html"
+    ]
+  },
+  "studentPage/enteringInfo.html": {
+    "resources": [
+      "css/plugin/mui.picker.min.css",
+      "img/i_details.png",
+      "js/studentJs/enteringInfo.js",
+      "img/i_selected.png",
+      "css/plugin/mui.css",
+      "img/yes_checkbox.png",
+      "img/i_notSelected.png",
+      "js/plugin/mui.picker.min.js",
+      "js/plugin/jquery-1.11.3.min.js",
+      "img/i_teacher.png",
+      "js/plugin/mui.min.js",
+      "css/page.css",
+      "img/imgVideoAdd.png",
+      "img/logIn_bg.png",
+      "img/i_return.png",
+      "css/common.css",
+      "js/commonJs/common.js",
+      "img/bg_integral.png",
+      "img/no_checkbox.png",
+      "img/bg.png",
+      "img/i_popupClose.png"
+    ]
+  },
+  "studentPage/info.html": {
+    "resources": [
+      "img/i_newAdd.png",
+      "js/studentJs/info.js",
+      "img/i_return.png",
+      "js/plugin/jquery-1.11.3.min.js",
+      "img/i_teacher.png",
+      "css/common.css",
+      "js/commonJs/common.js",
+      "js/plugin/mui.min.js",
+      "css/page.css",
+      "img/bg_integral.png",
+      "img/bg.png"
+    ],
+    "refer": [
+      "studentPage/enteringInfo.html"
+    ]
+  },
+  "studentPage/signIn.html": {
+    "resources": [
+      "img/right_arrows.png",
+      "img/left_arrows.png",
+      "js/studentJs/signIn.js"
+    ]
+  }
+}

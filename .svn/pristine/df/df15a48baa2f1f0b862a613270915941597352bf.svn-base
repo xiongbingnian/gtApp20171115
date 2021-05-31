@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>指导记录</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle info_subtitle">指导记录<a class="guideRecordAdd"><i class="i_newAdd"></i></a></p>
+        <ul class="myStudent_list">
+            <li>
+                <p><span class="class">计算机应用技术1班</span> <a class="guideRecordAdd"><i class="i_allSubtitle"></i></a></p>
+                <div class="statistics_unit way_time">
+                    <div>
+                        <span>指导方式</span>
+                        <span class="color_26A382">QQ指导</span>
+                        <b></b>
+                    </div>
+                    <div>
+                        <span>指导时间</span>
+                        <span class="color_26A382">2017-10-20</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p><span class="class">计算机应用技术2班</span> <a class="guideRecordAdd"><i class="i_allSubtitle"></i></a></p>
+                <div class="statistics_unit way_time">
+                    <div>
+                        <span>指导方式</span>
+                        <span class="color_26A382">微信指导</span>
+                        <b></b>
+                    </div>
+                    <div>
+                        <span>指导时间</span>
+                        <span class="color_26A382">2017-10-20</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p><span class="class">计算机应用技术3班</span> <a class="guideRecordAdd"><i class="i_allSubtitle"></i></a></p>
+                <div class="statistics_unit way_time">
+                    <div>
+                        <span>指导方式</span>
+                        <span class="color_26A382">现场指导</span>
+                        <b></b>
+                    </div>
+                    <div>
+                        <span>指导时间</span>
+                        <span class="color_26A382">2017-10-20</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
+
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/teacherJs/guideRecord.js"></script>
+</body>
+</html>

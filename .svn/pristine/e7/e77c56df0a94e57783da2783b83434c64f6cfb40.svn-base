@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-实习招聘详情</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <div class="recruit_head">
+            <h3>AR测试工程师 <span class="right color_F47474">5k-8k</span></h3>
+            <div>
+                <span class="site"><i class="i_site"></i>广州</span>
+                <span class="education"><i class="i_education"></i>大专</span>
+                <span class="peopleNum"><i class="i_peopleNum"></i>3人</span>
+                <span class="browseNum"><i class="i_browseNum"></i>78次</span>
+            </div>
+        </div>
+        <div class="recruit_info">
+            <h3 class="recruit_info_title">职位详情</h3>
+            <h4>工作职责：</h4>
+            <p>1.负责AR（增强现实）类应用测试工作；</p>
+            <p>2.负责AR（增强现实）类应用测试工作；</p>
+            <p>3.负责AR（增强现实）类应用测试工作；</p>
+            <h4>任职要求：</h4>
+            <p>1.负责AR（增强现实）类应用测试工作；负责AR（增强现实）类应用测试工作；负责AR（增强现实）类应用测试工作；</p>
+            <p>2.负责AR（增强现实）类应用测试工作；</p>
+            <p>3.负责AR（增强现实）类应用测试工作；</p>
+            <p>4.负责AR（增强现实）类应用测试工作；</p>
+            <p>5.负责AR（增强现实）类应用测试工作；</p>
+        </div>
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=5, user-scalable=no">
+    <title>微信实习工场-写日报</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <div class="fCentre">
+            <p class="subtitle checkbox_group">
+            	写日报 
+            	<span class="colorGreen">3-13</span>
+            	<span class="right leave info_checkbox">
+            		<i class="no_checkbox"></i>
+            		请假
+            	</span>
+            </p>
+            <textarea class="write_txt" placeholder="说说您今天的工作成果、心得、体会......"></textarea>
+        </div>
+        <div class="margin_left">
+            <p class="subhead">上传图片/视频</p>
+            <div class="imgVideo_box">
+                <img class="img_file" src="../img/logIn_bg.png" alt="">
+                <!--<video controls="controls" class="video_file" src="../img/11.mp4"></video>-->
+                <div class="del_bg"></div>
+                <i class="i_del"></i>
+            </div>
+            <div class="imgVideo_box imgVideoAdd">
+                <input class="file_upload" id="file" type="file">
+            </div>
+        </div>
+        <span id="btn_save" class="btn_save">保存</span>
+    </section>
+    <!--图片预览弹窗-->
+    <div class="popup imgPvw_popup">
+        <div class="mask"></div>
+        <div class="imgPvw_box">
+            <img class="pvw_img" src="../img/logIn_bg.png" alt="">
+        </div>
+    </div>
+    <!--保存成功提示框-->
+    <div class="prompt_box">
+        <div>
+            <img src="../img/successful.png" alt="">
+            <p>保存成功</p>
+        </div>
+    </div>
+    <!--删除提示弹窗-->
+    <div class="popup del_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>删除确认</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section del_section">
+                    <p class="popup_hint">确定删除该图片/视频吗？</p>
+                    <span class="btn_confirm">确认</span>
+                    <span class="btn_return">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/studentJs/daily.js"></script>
+</body>
+</html>

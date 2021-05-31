@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-实习信息</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/plugin/mui.css">
+    <link rel="stylesheet" href="../css/plugin/mui.picker.min.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle info_subtitle">录入实习信息</p>
+        <form>
+        	<input type="hidden" id="companyId" name="companyId" />
+        	<div class="menu">
+	            <ul class="practiceWay_list">
+	                <li class="class_active practice_li">实习</li>
+	                <li class="joinUp_li">参军</li>
+	                <li class="goUp_li">升学</li>
+	                <li class="noPractice_li">未实习</li>
+	            </ul>
+        	</div>
+        	<div class="practice_box">
+        		<ul class="info_list">
+	                <li>
+	                    <label><a class="enteringCompanyInfo">实习单位</a></label>
+	                    <input id="company" class="pullDown_input" type="text" placeholder="请输入实习单位">
+	                    <div id="company_list" class="hide">
+	                        <ul class="pullDown_list">
+	                            <!--<li>广东轩辕网络科技股份有限公司</li>
+	                            <li>广州昊源互联教育科技研究院有限公司</li>
+	                            <li>广东轩辕网络科技股份有限公司</li>-->
+	                        </ul>
+	                        <i class="i_white_arrowUp"></i>
+	                    </div>
+	                </li>
+	                <li>
+	                    <label>实习地点</label>
+	                    <input class="city" type="text" placeholder="请输入实习地点" readonly="readonly">
+	                </li>
+	                <li>
+	                    <label>实习岗位</label>
+	                    <input type="text" placeholder="请输入实习岗位">
+	                </li>
+	                <li>
+	                    <label>实习性质</label>
+		               	<span class="info_select">
+		                   <i class="i_selected"></i>
+		                   	专业对应
+		               	</span>
+		               	<span class="info_select">
+		                   <i class="i_notSelected"></i>
+		                  	 专业相关
+		               	</span>
+		               	<span class="info_select">
+		                   <i class="i_notSelected"></i>
+		                   	专业无关
+		               	</span>
+	                </li>
+	            </ul>
+	            <ul class="info_list">
+	                <li>
+	                    <label>补贴标准</label>
+	                    <input class="subsidy" type="text" placeholder="请输入补贴">
+	                    <span>元/月</span>
+	                </li>
+	                <li>
+	                    <label><a class="enteringExternalTeacherInfo">校外老师</a></label>
+	                    <input class="pullDown_input" type="text" placeholder="李大平">
+	                    <div class="hide">
+	                        <ul class="pullDown_list">
+	                            <li>李大平</li>
+	                            <li>李小平</li>
+	                            <li>张小</li>
+	                        </ul>
+	                        <i class="i_white_arrowUp"></i>
+	                    </div>
+	                </li>
+	            </ul>
+	            <ul class="info_list">
+	                <li>
+	                    <label>安排方式</label>
+	                   <span class="info_select">
+	                       <i class="i_selected"></i>
+	                       	学校统一安排
+	                   </span>
+	                   <span class="info_select">
+	                       <i class="i_notSelected"></i>
+	                       	学生自某
+	                   </span>
+	                   <span class="info_select">
+	                       <i class="i_notSelected"></i>
+	                       	其他
+	                   </span>
+	                </li>
+	                <li>
+	                    <label>实习时间</label>
+	                    <input type="text" class="practice_data" placeholder="实习开始时间" readonly="readonly">
+	                    <label>至</label>
+	                    <input type="text" class="practice_data" placeholder="实习结束时间" readonly="readonly">
+	                </li>
+	                <li>
+	                    <label>实习任务</label>
+	                    <textarea></textarea>
+	                </li>
+	            </ul>
+	            <ul class="info_list select_box">
+	                <li>
+	                    <label class="agreement_label"><i class="i_notSelected"></i>是否签订顶岗实习协议</label>
+	                    <div class="imgVideo_box imgVideoAdd hide">
+	                        <input class="upload" type="file">
+	                    </div>
+	                </li>
+	                <li class="insurance_box">
+	                    <label class="insurance_label"><i class="i_notSelected"></i>是否购买实习保险</label>
+	                    <div class="imgVideo_box imgVideoAdd hide">
+	                        <input class="upload" type="file">
+	                    </div>
+	                </li>
+	            </ul>
+        	</div>
+            <div class="no_practice_box hide">
+            	<ul class="info_list">
+	                <li>
+	                    <label>未实习原因</label>
+	                    <textarea></textarea>
+	                </li>
+	            </ul>
+            </div>
+            <ul class="info_list">
+            	<li>
+                    <label>满意度</label>
+                   <span class="info_select">
+                       <i class="i_selected"></i>
+                       	非常满意
+                   </span>
+                   <span class="info_select">
+                       <i class="i_notSelected"></i>
+                       	基本满意
+                   </span>
+                   <span class="info_select">
+                       <i class="i_notSelected"></i>
+                       	不满意
+                   </span>
+                </li>
+            </ul>
+            <!--<span class="btn_save btn_saveInfo">保存</span>-->
+            <span id="save" class="btn_save btn_saveInfo">保存</span>
+        </form>
+    </section>
+    <!--图片预览弹窗-->
+    <div class="popup imgPvw_popup">
+        <div class="mask"></div>
+        <div class="imgPvw_box">
+            <img class="pvw_img" src="../img/logIn_bg.png" alt="">
+        </div>
+    </div>
+    <!--录入详细的实习单位弹窗-->
+    <div class="popup company_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>实习单位</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section">
+                    <p class="popup_hint">请输入详细的实习单位信息</p>
+                    <a class="btn_popup enteringCompanyInfo">前往录入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--保存成功提示框-->
+    <!--<div class="prompt_box">-->
+        <!--<div>-->
+            <!--<img src="../img/successful.png" alt="">-->
+            <!--<p>保存成功</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--删除提示弹窗-->
+    <div class="popup del_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>删除确认</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section del_section">
+                    <p class="popup_hint">确定删除该图片/视频吗？</p>
+                    <span class="btn_confirm">确认</span>
+                    <span class="btn_return">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/plugin/mui.picker.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/commonJs/AppUtils.js"></script>
+<script src="../js/commonJs/CommonUtils.js"></script>
+<script src="../js/commonJs/LangUtils.js"></script>
+<script src="../js/studentJs/enteringInfo.js"></script>
+</body>
+</html>

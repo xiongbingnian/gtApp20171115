@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-签到</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <div class="btn_toggle_box">
+            <div class="btn_toggle">
+                <a id="signInTeacher"><span class="btn_mySignIn">我的签到</span></a>
+                <a> <span class="btn_studentSignIn signIn_on">学生签到</span></a>
+            </div>
+        </div>
+        <!--学生签到-->
+        <div class="studentSignIn_main">
+            <div id="chart_member"></div>
+            <div class="signIn_title">
+                <span>日期</span>
+                <span>签到情况</span>
+            </div>
+            <ul class="studentSignIn_list">
+                <li>
+                    <a href="javascript:;">
+                        <span>11-15</span>
+                        <span>
+                            <span class="all_numW">
+                                <span class="proportion_numW">
+                                    <b class="proportion_people">5人</b>
+                                </span>
+                            </span>
+                            <b class="all_people">30人</b>
+                        </span>
+                        <a class="signInStudentPage">
+                            <i class="i_allSubtitle absolute_right"></i>
+                        </a>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>11-14</span>
+                        <span>
+                            <span class="all_numW">
+                                <span class="proportion_numW">
+                                    <b class="proportion_people">5人</b>
+                                </span>
+                            </span>
+                            <b class="all_people">30人</b>
+                        </span>
+                        <a class="signInStudentPage">
+                            <i class="i_allSubtitle absolute_right"></i>
+                        </a>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>11-13</span>
+                        <span>
+                            <span class="all_numW">
+                                <span class="proportion_numW">
+                                    <b class="proportion_people">5人</b>
+                                </span>
+                            </span>
+                            <b class="all_people">30人</b>
+                        </span>
+                        <a class="signInStudentPage">
+                            <i class="i_allSubtitle absolute_right"></i>
+                        </a>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>11-12</span>
+                        <span>
+                            <span class="all_numW">
+                                <span class="proportion_numW">
+                                    <b class="proportion_people">5人</b>
+                                </span>
+                            </span>
+                            <b class="all_people">30人</b>
+                        </span>
+                        <a class="signInStudentPage">
+                            <i class="i_allSubtitle absolute_right"></i>
+                        </a>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>11-11</span>
+                        <span>
+                            <span class="all_numW">
+                                <span class="proportion_numW">
+                                    <b class="proportion_people">5人</b>
+                                </span>
+                            </span>
+                            <b class="all_people">30人</b>
+                        </span>
+                        <a class="signInStudentPage">
+                            <i class="i_allSubtitle absolute_right"></i>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/plugin/echarts.min.js"></script>
+<script src="../js/teacherJs/signInStudent.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+	"logIn.html": {
+		"refer": [
+			"studentPage/index.html",
+			"teacherPage/index.html"
+		]
+	},
+	"studentPage/index.html": {
+		"refer": [
+			"studentPage/signIn.html",
+			"logIn.html"
+		]
+	}
+}

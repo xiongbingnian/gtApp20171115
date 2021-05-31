@@ -1,0 +1,132 @@
+ /************登录***********/
+//登录页退出APP
+mui.plusReady(function() {
+	if ('Android' == plus.os.name) {
+	    var first = null;
+	    mui.back = function() {
+	        if (!first) {
+	            first = new Date().getTime();
+	            mui.toast('再按一次退出应用');
+	            setTimeout(function() {
+	                first = null;
+	            }, 1000);
+	        } else {
+	            if (new Date().getTime() - first < 1000) {         
+					plus.runtime.quit();
+	            }
+	       }
+	    }
+	}
+});
+document.getElementById("btn_logIn").addEventListener("tap",function(){
+   var account = $('.account').val();
+   var password = $('.password').val();
+   cu.post({
+		url: 'sys/login',
+		data:{
+			//sId : '',   /*广体*/
+			sId : '10',
+			lo_na : account,
+			lo_pd : password
+		},
+		timeout:1000*1000,//超时时间设置为10秒；
+		success:function(data){
+			//服务器返回响应，根据响应结果，分析是否登录成功；
+			console.log(data);
+			
+			//登录失败
+			if(lu.isNotEmpty(data.errMsg)){
+				/*if('403' == data.code){
+					mui.toast('token已失效，请重新登录!');
+					au.logout();
+				}else{*/
+					mui.toast(data.errMsg);
+					return;
+//				}
+			}
+			var token = data.result.token;
+			console.log(token);
+			au.initToken(token);
+			
+			//登录成功将 用户信息 放到  localStorage, localStorage 只能存放字符串类型
+			/*var loginInfo = cu.sync({
+				url : '/sys/get-login-info',
+				data : {
+					userId : data.data.userId
+				}
+			});*/
+			var loginInfo = cu.sync("sys/get-login-info");
+			
+			var user = loginInfo.result;
+			au.initLoginInfo(user);
+			initMain(user);
+			
+			//console.log(JSON.parse(au.getLoginInfo()));
+			
+		},
+		error:function(xhr,type,errorThrown){
+			//异常处理；
+			console.log(type);
+			console.log(xhr);
+		}
+   	});
+});
+/************登录框下拉列表************/
+$(".school_box input").focus(function(){
+    $(this).next(".school_list").show();
+}).blur(function(){
+    $(this).next(".school_list").hide();
+});
+mui(".school_list").on("tap","li",function(){
+	$(this).parent().prev("input").val( $(this).html());
+//  $(".school_box input").val( $(this).html());
+    $(".school_list").hide();
+});
+
+function initMain(user){
+	var userType = user.type;
+	console.log(userType);
+	//超级管理员
+	if(lu.isEmpty(userType)){
+		
+	}else if('IN_TEACHER' == userType){ //校内教师
+		//  mui.openWindow 在mui.ready下无反应
+		mui.openWindow({
+			url:"teacherPage/index.html",
+			show: {
+					aniShow: 'slide-in-right',
+					duration: 300
+				},
+			waiting:{
+		      autoShow:true,//自动显示等待框，默认为true
+		      title:'正在加载...',//等待对话框上显示的提示内容
+		    }
+		});
+		
+	}else if('STUDENT' == userType){ //学生
+		mui.openWindow({
+			url:"studentPage/index.html",
+			show: {
+					aniShow: 'slide-in-right',
+					duration: 300
+			},
+			waiting:{
+		      autoShow:true,//自动显示等待框，默认为true
+		      title:'正在加载...',//等待对话框上显示的提示内容
+		    }
+		});
+	}
+};
+
+mui.ready(function(){
+	if(!au.verifyToken()){
+		log('token已失效');
+		au.logout();
+	}
+});
+
+mui.plusReady(function(){
+	//判断用户是否登录
+	var user = au.getLoginInfo();
+	if(lu.isNotEmpty(user)) initMain(user);
+});

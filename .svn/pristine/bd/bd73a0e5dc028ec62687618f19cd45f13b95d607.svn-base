@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-学生日报</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/plugin/mui.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    
+    <section>
+        <p class="subtitle info_subtitle">学生日报</p>
+        <div class="menu">
+            <ul class="menu_list">
+                <li class="class_active">计算机应用技术1班</li>
+                <li>计算机应用技术2班</li>
+                <li>计算机应用技术3班</li>
+                <li>商务英语1班</li>
+                <li>商务英语2班</li>
+            </ul>
+        </div>
+    	<div id="pullrefresh" class="mui-content mui-scroll-wrapper p_top">
+    		<div class="mui-scroll">
+    			<div class="table_box">
+		            <table class="center_table">
+		                <tr>
+		                    <th>日期</th>
+		                    <th>已写</th>
+		                    <th>未写</th>
+		                    <th>已评</th>
+		                    <th>未评</th>
+		                    <th style="width: 40px;"></th>
+		                </tr>
+		                <tr>
+		                    <td>3-27</td>
+		                    <td class="color_5A5858">10</td>
+		                    <td>20</td>
+		                    <td class="color_5A5858">0</td>
+		                    <td>10</td>
+		                    <td>
+		                        <a class="studentDailyPage"><img src="../img/i_allSubtitle.png" alt=""></a>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td>3-24</td>
+		                    <td class="color_5A5858">28</td>
+		                    <td>2</td>
+		                    <td class="color_5A5858">20</td>
+		                    <td>8</td>
+		                    <td>
+		                        <a class="studentDailyPage"><img src="../img/i_allSubtitle.png" alt=""></a>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td>3-23</td>
+		                    <td class="color_5A5858">10</td>
+		                    <td>20</td>
+		                    <td class="color_5A5858">0</td>
+		                    <td>10</td>
+		                    <td>
+		                        <a class="studentDailyPage"><img src="../img/i_allSubtitle.png" alt=""></a>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td>3-22</td>
+		                    <td class="color_5A5858">10</td>
+		                    <td>20</td>
+		                    <td class="color_5A5858">0</td>
+		                    <td>10</td>
+		                    <td>
+		                        <a class="studentDailyPage"><img src="../img/i_allSubtitle.png" alt=""></a>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td>3-21</td>
+		                    <td class="color_5A5858">10</td>
+		                    <td>20</td>
+		                    <td class="color_5A5858">0</td>
+		                    <td>10</td>
+		                    <td>
+		                        <a class="studentDailyPage"><img src="../img/i_allSubtitle.png" alt=""></a>
+		                    </td>
+		                </tr>
+		            </table>
+		            <div class="text_more"> 查看更多 </div>
+		       </div>
+    		</div>
+        </div>
+    </section>
+    
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/teacherJs/studentDaily.js"></script>
+</body>
+</html>

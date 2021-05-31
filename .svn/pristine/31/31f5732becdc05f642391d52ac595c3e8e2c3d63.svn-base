@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-老师首页</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="head_box">
+            <img class="img_head" src="../img/teacherHead.png" alt="">
+            <span class="btn_exit">退出</span>
+        </div>
+        <div class="info_box">
+            <div>
+                <span>
+                    <b class="student_name">赵涛</b>
+                </span>
+                <a class="right integral">
+                    <span>50</span>
+                </a>
+            </div>
+        </div>
+        <div class="queryLocation_box">
+            <a id="myQuery">
+                <i class="i_query"></i>
+                <b class="redDot_query"></b>
+            </a>
+        </div>
+    </header>
+    <!--<p class="remind"><a href="javascript:;"><i class="i_remind"></i> <span class="remind_content">您当前还没有录入实习信息，请录入实习信息</span></a><i class="i_close"></i></p>-->
+    <section>
+        <div class="module_box">
+            <p class="inform"><span class="subtitle">通知公告</span> <a><i class="i_allSubtitle"></i></a></p>
+            <div class="inform_box">
+            	<ul class="inform_list"></ul>
+            </div>
+        </div>
+        <div class="module_box">
+            <p><span class="subtitle">我的日常</span></p>
+            <ul class="menu_list">
+                <li>
+                    <a class="signIn" id="signInStudent"> 
+                        <i class="i_signIn"></i>
+                        <div>签到</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="studentDaily">
+                        <i class="i_studentDaily"></i>
+                        <div>学生日报</div>
+                        <b class="num">2</b>
+                    </a>
+                </li>
+                <li>
+                    <a id="studentWeekly">
+                        <i class="i_studentWeekly"></i>
+                        <div>学生周报</div>
+                        <b class="num">30</b>
+                    </a>
+                </li>
+                <li>
+                    <a id="studentMonthly">
+                        <i class="i_studentMonthly"></i>
+                        <div>学生月报</div>
+                        <b class="num">50</b>
+                    </a>
+                </li>
+                <li>
+                    <a id="guideRecord">
+                        <i class="i_directRecord"></i>
+                        <div>指导记录</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="myStudent">
+                        <i class="i_myStudent"></i>
+                        <div>我的学生</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="studentMessage">
+                        <i class="i_studentMessage"></i>
+                        <div>学生留言</div>
+                        <b class="num">99+</b>
+                    </a>
+                </li>
+                <li>
+                    <a id="recruit">
+                        <i class="i_recruit"></i>
+                        <div>实习招聘</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <img class="banner" src="../img/banner.png" alt="">
+    </section>
+    <footer>
+        <p>2016©广州轩辕云岗信息科技有限公司 </p>
+    </footer>
+    <div class="popup exit_popup">
+        <div class="mask"></div>
+        <div class="exit_box">
+            <a id="logIn"><span class="btn_logOut">退出登录</span></a>
+            <span class="btn_cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/commonJs/AppUtils.js"></script>
+<script src="../js/commonJs/CommonUtils.js"></script>
+<script src="../js/commonJs/LangUtils.js"></script>
+<script src="../js/teacherJs/index.js"></script>
+<script src="../js/plugin/template-web.js"></script>
+
+<script id="tpl-info" type="text/html">
+<ul>
+    <li>学院：{{departName}}</li>
+    <li>所带学生：{{info.student_count}}</li>
+    <li>实习课程：{{info.internshipName}}</li>
+</ul>
+</script>
+
+<script id="tpl-notice" type="text/html">
+{{each notices notice index}}
+	<li class="inform" data-id="{{notice.id}}">
+		<a><span class="subtitle_title">【{{notice.createTime | dateFormat 'MM.dd'}}】{{notice.title}}</span></a>
+	</li>
+{{/each}}
+</script>
+</body>
+</html>

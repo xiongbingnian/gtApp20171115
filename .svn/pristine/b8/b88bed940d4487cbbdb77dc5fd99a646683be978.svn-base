@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-新建留言</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle info_subtitle">新建留言
+        	<!--<a href="myMessage.html" class="right allFormerly">查看全部留言 <i class="i_allSubtitle"></i></a>-->
+        </p>
+        <form>
+            <ul class="info_list">
+                <li>
+                    <label>选择老师</label>
+                    <input class="pullDown_input" type="text" placeholder="请选择老师"  readonly="readonly">
+                    <div class="hide">
+                        <ul class="pullDown_list">
+                            <li>李大平</li>
+                            <li>李小平</li>
+                        </ul>
+                        <i class="i_white_arrowUp"></i>
+                    </div>
+                </li>
+                <li class="border_none">
+                    <label>留言内容</label>
+                    <textarea></textarea>
+                </li>
+                <li class="hidden">
+                    <label class="block">上传图片</label>
+                    <div class="imgVideo_box imgVideoAdd">
+                        <input class="upload" type="file">
+                    </div>
+                </li>
+            </ul>
+            <span id="btn_save" class="btn_save">保存</span>
+        </form>
+    </section>
+    <!--图片预览弹窗-->
+    <div class="popup imgPvw_popup">
+        <div class="mask"></div>
+        <div class="imgPvw_box">
+            <img class="pvw_img" src="../img/logIn_bg.png" alt="">
+        </div>
+    </div>
+    <!--保存成功提示框-->
+    <div class="prompt_box">
+        <div>
+            <img src="../img/successful.png" alt="">
+            <p>保存成功</p>
+        </div>
+    </div>
+    <!--删除提示弹窗-->
+    <div class="popup del_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>删除确认</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section del_section">
+                    <p class="popup_hint">确定删除该图片/视频吗？</p>
+                    <span class="btn_confirm">确认</span>
+                    <span class="btn_return">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+</body>
+</html>

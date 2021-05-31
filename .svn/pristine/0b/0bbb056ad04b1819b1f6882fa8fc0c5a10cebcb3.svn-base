@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-实习单位</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle info_subtitle">录入实习单位信息</p>
+        <form>
+            <ul class="info_list">
+                <li>
+                    <label>单位名称</label>
+                    <input type="text" placeholder="请输入实习单位名称">
+                </li>
+                <li>
+                    <label>所在城市</label>
+                    <input type="text" placeholder="请输入所在城市">
+                </li>
+                <li>
+                    <label>详细地址</label>
+                    <input type="text" placeholder="请输入详细地址">
+                </li>
+                <li>
+                    <label>单位性质</label>
+                    <input class="pullDown_input" type="text" placeholder="事业单位" readonly="readonly">
+                    <div class="hide">
+                        <ul class="pullDown_list">
+                            <li>军队</li>
+                            <li>政府机关</li>
+                            <li>事业单位</li>
+                            <li>企业</li>
+                            <li>个人</li>
+                            <li>社会团体</li>
+                        </ul>
+                        <i class="i_white_arrowUp"></i>
+                    </div>
+                </li>
+                <li>
+                    <label>所有产业</label>
+                    <input class="pullDown_input" type="text" placeholder="第一产业"  readonly="readonly">
+                    <div class="hide">
+                        <ul class="pullDown_list">
+                            <li>第一产业</li>
+                            <li>第二产业</li>
+                            <li>第三产业</li>
+                        </ul>
+                        <i class="i_white_arrowUp"></i>
+                    </div>
+                </li>
+                <li>
+                    <label>所在行业</label>
+                    <input class="pullDown_input" type="text" placeholder="信息传输、计算机服务和软件业" readonly="readonly">
+                    <div class="hide">
+                        <ul class="pullDown_list">
+                            <li>农、林、牧、渔业</li>
+                            <li>采矿业</li>
+                            <li>制造业</li>
+                            <li>电力、燃气及水的生产和供应业</li>
+                            <li>建筑业</li>
+                            <li>交通运输、仓储和邮政业</li>
+                            <li>信息传输、计算机服务和软件业</li>
+                            <li>批发和零售业</li>
+                            <li>住宿和餐饮业</li>
+                            <li>金融业</li>
+                            <li>房地产业</li>
+                            <li>租赁和商务服务业</li>
+                            <li>科学研究、技术服务和地质勘查业</li>
+                            <li>环境和公共设备管理业</li>
+                            <li>居民服务和其他服务业</li>
+                            <li>教育</li>
+                            <li>卫生、社会保障和社会福利业</li>
+                            <li>文化、体育和娱乐业</li>
+                            <li>公共管理和社会组织</li>
+                            <li>国际组织</li>
+                        </ul>
+                        <i class="i_white_arrowUp"></i>
+                    </div>
+                </li>
+                <li>
+                    <label>规模（人）</label>
+                    <input class="pullDown_input" type="text" placeholder="50人以下"  readonly="readonly">
+                    <div class="hide">
+                        <ul class="pullDown_list">
+                            <li>50人以下</li>
+                            <li>50-100人</li>
+                            <li>100-500人</li>
+                            <li>500人以上</li>
+                        </ul>
+                        <i class="i_white_arrowUp"></i>
+                    </div>
+                </li>
+                <li>
+                    <label>单位类型</label>
+                    <input class="pullDown_input" type="text" placeholder="国有企业"  readonly="readonly">
+                    <div class="hide">
+                        <ul class="pullDown_list">
+                            <li>国有企业</li>
+                            <li>集体企业</li>
+                            <li>私营企业</li>
+                            <li>港、澳、台商投资企业</li>
+                            <li>外商投资企业</li>
+                            <li>其他企业</li>
+                            <li>非企业</li>
+                        </ul>
+                        <i class="i_white_arrowUp"></i>
+                    </div>
+                </li>
+                <li>
+                    <label>单位联系人</label>
+                    <input type="text" placeholder="请输入单位联系人">
+                </li>
+                <li>
+                    <label>联系人职务</label>
+                    <input type="text" placeholder="请输入联系人职务">
+                </li>
+                <li>
+                    <label>办公电话</label>
+                    <input type="text" placeholder="请输入联系方式">
+                </li>
+            </ul>
+            <span class="btn_save btn_saveCompanyInfo">保存</span>
+        </form>
+    </section>
+    <!--录入详细的校外老师信息弹窗-->
+    <div class="popup externalT_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>校外老师</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section">
+                    <p class="popup_hint">请录入详细的校外老师信息</p>
+                    <a class="btn_popup enteringExternalTeacherInfo">前往录入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--保存成功提示框-->
+    <!--<div class="prompt_box">-->
+    <!--<div>-->
+    <!--<img src="../img/successful.png" alt="">-->
+    <!--<p>保存成功</p>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/studentJs/enteringCompanyInfo.js"></script>
+</body>
+</html>

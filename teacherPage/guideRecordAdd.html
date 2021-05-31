@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>添加指导记录</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/plugin/mui.css">
+    <link rel="stylesheet" href="../css/plugin/mui.picker.min.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle info_subtitle">添加指导记录</p>
+        <form>
+            <ul class="info_list">
+            	<li>
+                    <label>指导日期</label>
+                    <input type="text" class="practice_data" placeholder="2016-04-15" readonly="readonly">
+                </li>
+                <li>
+                    <label>指导班级</label>
+                    <input class="pullDown_input" type="text" value="计算机1班" readonly="readonly">
+                    <div class="hide">
+                        <ul class="pullDown_list">
+                            <li>计算机1班</li>
+                            <li>计算机2班</li>
+                            <li>计算机3班</li>
+                        </ul>
+                        <i class="i_white_arrowUp"></i>
+                    </div>
+                </li>
+                <li>
+                    <label>指导学生</label>
+                    <span class="check_all">
+	                   <i class="i_notSelected"></i>
+						全选
+	                </span>
+                </li>
+                <li class="student_choice">
+                	<table class="student_table">
+                		<tr>
+                			<td><span>张三 <b>1410730315</b></span></td>
+                			<td><span class="student_active">李四 <b>1410730315</b></span></td>
+                		</tr>
+                		<tr>
+                			<td><span>王小五 <b>1410730315</b></span></td>
+                			<td><span>李六 <b>1410730315</b></span></td>
+                		</tr>
+                		<tr>
+                			<td><span>王丽丽 <b>1410730315</b></span></td>
+                			<td> <span>张小小<b>1410730315</b></span></td>
+                		</tr>
+                		<tr>
+                			<td><span>王丽丽 <b>1410730315</b></span></td>
+                			<td> <span>张小小<b>1410730315</b></span></td>
+                		</tr>
+                		<tr>
+                			<td><span>陈三三<b>1410730315</b></span></td>
+                			<td><span>张三 <b>1410730315</b></span></td>
+                		</tr>
+                		<tr>
+                			<td><span>陈三三<b>1410730315</b></span></td>
+                			<td></td>
+                		</tr>
+                	</table>
+
+                </li>
+                <li>
+                    <label>指导类型</label>
+                    <div class="guide_type">
+                    	<span class="info_select">
+		                   <i class="i_selected"></i>
+							现场指导
+		                </span>
+		                <span class="info_select">
+		                   <i class="i_notSelected"></i>
+		                   	电话指导
+		                </span>
+		                <span class="info_select">
+		                   <i class="i_notSelected"></i>
+		                   	QQ指导
+		                </span>
+		                <span class="info_select">
+		                   <i class="i_notSelected"></i>
+		                   	微信指导
+		                </span>
+		                <span class="info_select">
+		                   <i class="i_notSelected"></i>
+		                   	邮件指导
+		                </span>
+                    </div>
+	                
+                </li>
+                <li>
+                    <label>实习企业</label>
+                    <input type="text"  placeholder="请填写实习企业" >
+                </li>
+            </ul>
+            <ul class="info_list">
+                <li>
+                    <label>指导内容</label>
+                    <textarea></textarea>
+                </li>
+            </ul>
+            <ul class="info_list select_box">
+                <li>
+                    <label>佐证材料</label>
+                    <div class="imgVideo_box imgVideoAdd">
+                        <input class="upload" type="file">
+                    </div>
+                </li>
+            </ul>
+            <span class="btn_save btn_saveInfo">保存</span>
+        </form>
+    </section>
+    <!--图片预览弹窗-->
+    <div class="popup imgPvw_popup">
+        <div class="mask"></div>
+        <div class="imgPvw_box">
+            <img class="pvw_img" src="../img/logIn_bg.png" alt="">
+        </div>
+    </div>
+    <!--录入详细的实习单位弹窗-->
+    <div class="popup company_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>实习单位</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section">
+                    <p class="popup_hint">请输入详细的实习单位信息</p>
+                    <a class="btn_popup enteringCompanyInfo">前往录入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--保存成功提示框-->
+    <!--<div class="prompt_box">-->
+        <!--<div>-->
+            <!--<img src="../img/successful.png" alt="">-->
+            <!--<p>保存成功</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--删除提示弹窗-->
+    <div class="popup del_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>删除确认</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section del_section">
+                    <p class="popup_hint">确定删除该图片/视频吗？</p>
+                    <span class="btn_confirm">确认</span>
+                    <span class="btn_return">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/plugin/mui.picker.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/teacherJs/guideRecordAdd.js"></script>
+</body>
+</html>

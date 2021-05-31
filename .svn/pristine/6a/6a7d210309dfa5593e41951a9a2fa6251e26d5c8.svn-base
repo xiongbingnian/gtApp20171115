@@ -1,0 +1,93 @@
+//录入实习单位页面跳转
+mui(".info_list").on("tap",".enteringCompanyInfo",function(){
+	mui.openWindow({
+		url:"enteringCompanyInfo.html",
+		show: {
+			aniShow: 'slide-in-right',
+			duration: 300
+		},
+		waiting:{
+	      autoShow:true,//自动显示等待框，默认为true
+	      title:'正在加载...',//等待对话框上显示的提示内容
+	    }
+	});
+});
+//录入校外教师页面跳转
+mui(".info_list").on("tap",".enteringExternalTeacherInfo",function(){
+	mui.openWindow({
+		url:"enteringExternalTeacherInfo.html",
+		show: {
+			aniShow: 'slide-in-right',
+			duration: 300
+		},
+		waiting:{
+	      autoShow:true,//自动显示等待框，默认为true
+	      title:'正在加载...',//等待对话框上显示的提示内容
+	    }
+	});
+});
+//弹窗录入实习单位页面跳转
+mui(".popup_section").on("tap",".enteringCompanyInfo",function(){
+	mui.openWindow({
+		url:"enteringCompanyInfo.html",
+		show: {
+			aniShow: 'slide-in-right',
+			duration: 300
+		},
+		waiting:{
+	      autoShow:true,//自动显示等待框，默认为true
+	      title:'正在加载...',//等待对话框上显示的提示内容
+	    }
+	});
+});
+
+//日期选择
+$(".practice_data").on("tap",function(){
+	var self=this;
+	var dtpicker = new mui.DtPicker({
+	    type: "date",//设置日历初始视图模式 
+	    beginDate: new Date(2010, 01, 01),//设置开始日期 
+	    endDate: new Date(2027, 01, 01),//设置结束日期 
+	}) 
+	dtpicker.show(function(rs) {
+		$(self).val(rs.text);
+//		picker.dispose();
+	});
+});
+
+mui.ready(function(){
+	document.getElementById("company").addEventListener('input',function(){
+		log(this.value);
+		var companyName = this.value;
+		//获取实习单位信息
+		cu.post({
+			url: '/basic/company/find-company-limit',
+			data:{
+				key : companyName
+			},
+			timeout:1000*1000,//超时时间设置为10秒；
+			success:function(data){
+				log(data);
+				var pullDown_list = $('.pullDown_list').empty();
+				mui.each(data.result,function(index,item){
+					//log(item);
+					var newInfo_list_id = 'newInfo_list'+(index+1);
+					$(['<li id="', item.id,'">', item.name ,'</li>'].join('')).appendTo(pullDown_list);
+				});
+				$('#company_list').show();
+			}
+		});
+	}); 
+	
+	
+	/*if(lu.isNotEmpty(user) && lu.isNotEmpty(user.student)) 
+		$('.student_name').html(user.student.name);*/
+});
+
+$("#save").on("tap",function(){
+	log('save');
+	cu.submit({
+		url : '/student/student-internship/save',
+		form : $("section").find("form")
+	});
+});

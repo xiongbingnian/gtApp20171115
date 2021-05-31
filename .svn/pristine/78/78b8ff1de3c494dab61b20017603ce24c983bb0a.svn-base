@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-月报</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle weekly_subtitle">我的月报</p>
+        <ul class="weeklyStatistics_list">
+            <li>
+                <b class="statistics_num">3</b>
+                <div>应写</div>
+            </li>
+            <li>
+                <b class="statistics_num">3</b>
+                <div>已写</div>
+            </li>
+            <li>
+                <b class="statistics_num">0</b>
+                <div>未写</div>
+            </li>
+        </ul>
+        <div class="monthly_box">
+            <table class="monthly_table">
+                <tr>
+                    <th>月份</th>
+                    <th>提交时间</th>
+                    <th>评价</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td><i class="dot_D9D9D9"></i><b class="num_border">1月<i class="red_dot"></i></b></td>
+                    <td>01-01</td>
+                    <td><b class="excellent">优</b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><i class="dot_D9D9D9"></i><b class="num_border">2月</b></td>
+                    <td>02-01</td>
+                    <td><b class="excellent">优</b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><i class="dot_D9D9D9"></i><b class="num_border">3月<i class="red_dot"></i></b></td>
+                    <td>03-01</td>
+                    <td><b class="poor">差</b></td>
+                    <td><a class="writeMonthly"><span class="btn_operation">重写</span></a></td>
+                </tr>
+                <tr>
+                    <td><i class="dot_D9D9D9"></i><b class="num_border">4月</b></td>
+                    <td>04-01</td>
+                    <td>/</td>
+                    <td><a class="writeMonthly"><span class="btn_operation">改</span></a></td>
+                </tr>
+                <tr class="this_monthly">
+                    <td><i class="dot_089A73"></i><b class="num_border">5月</b></td>
+                    <td>05-01</td>
+                    <td>/</td>
+                    <td><a class="writeMonthly"><span class="btn_operation">写</span></a></td>
+                </tr>
+                <tr class="next_monthly">
+                    <td><i class="dot_D9D9D9"></i><b class="num_border">6月</b></td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td></td>
+                </tr>
+            </table>
+            <hr class="perpendicular_line">
+        </div>
+
+    </section>
+
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/studentJs/writeMonthly.js"></script>
+</body>
+</html>

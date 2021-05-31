@@ -1,0 +1,3 @@
+template.defaults.imports.dateFormat = function(date, format) {
+	return lu.formatDateTime(date, format)
+};

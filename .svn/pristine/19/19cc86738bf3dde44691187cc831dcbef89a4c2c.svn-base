@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-登录</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/logIn.css">
+</head>
+<body>
+    <div class="container">
+        <img class="logIn_bg" src="./img/logIn_bg.png" alt="">
+        <div class="logIn_section">
+            <form action="">
+            	<p class="hint">
+		            <i class="i_hint"></i>您输入的密码和帐户名不匹配，请重新输入
+		        </p>
+                <div class="school_box">
+                    <input id="schoolId" class="school"  placeholder="请输入您的学校" data-id="">
+                    <ul id="schools" class="school_list">
+                        <!--<li>广州职业技术学院</li>
+                        <li>广州番禺职业技术学院</li>-->
+                    </ul>
+                </div>
+                <div class="school_box">
+                    <input class="account" type="text" placeholder="请输入您的账号">
+                    <!--<ul class="school_list">
+                        <li>student</li>
+                        <li>teacher</li>
+                    </ul>-->
+                </div>
+                <input class="password"  type="password" placeholder="请输入您的密码">
+                <button type="button" id="btn_logIn" class="btn_logIn">登录</button>
+            </form>
+        </div>
+    </div>
+<script src="./js/plugin/jquery-1.11.3.min.js"></script>
+<script src="./js/plugin/mui.js"></script>
+<script src="js/commonJs/common.js"></script>
+<script src="js/commonJs/AppUtils.js"></script>
+<script src="js/commonJs/CommonUtils.js"></script>
+<script src="js/commonJs/LangUtils.js"></script>
+<script src="js/commonJs/logIn.js"></script>
+<script src="js/plugin/template-web.js"></script>
+
+<!--
+	作者：tanzhicheng
+	时间：2017-11-15
+	描述：获取学校数据
+-->
+<script id="tpl-schools" type="text/html">
+{{each schools school index}}
+	<li data-id="{{school.id}}">{{school.name}}</li>
+{{/each}}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-我的评价</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <div class="rating_head">
+            <h3>评价实习企业：</h3>
+            <div class="rating_target rating_company">
+                <p>
+                    <i class="i_selected"></i>
+                    <span class="color_13AC83">广东轩辕网络科技股份有限公司</span>
+                    <span class="right hide">得分：<b class="color_D81B1B">98</b></span>
+                </p>
+                <p>
+                    <i class="i_notSelected"></i>
+                    <span class="color_13AC83">广州昊源互联教育科技研究院有限公司</span>
+                    <span class="right hide">得分：<b class="color_D81B1B">98</b></span>
+                </p>
+            </div>
+        </div>
+        <div class="fCentre">
+            <ul class="evaluationContent_list">
+                <li>
+                    <H4>1.实习态度</H4>
+                    <p>1.1实习时长情况</p>
+                    <div class="radio">
+                        <span>优</span><span>良</span><span>中</span><span>差</span>
+                    </div>
+                </li>
+                <li>
+                    <H4>2.实习安排</H4>
+                    <p>2.1岗位专业性</p>
+                    <div class="radio">
+                        <span>优</span><span>良</span><span>中</span><span>差</span>
+                    </div>
+                    <p>2.2实习内容的科学性（教学性）</p>
+                    <div class="radio">
+                        <span>优</span><span>良</span><span>中</span><span>差</span>
+                    </div>
+                    <p>2.3实习单位对学生实习管理的规范性</p>
+                    <div class="radio">
+                        <span>优</span><span>良</span><span>中</span><span>差</span>
+                    </div>
+                </li>
+                <li>
+                    <H4>3.实习效果</H4>
+                    <p>3.1实习总结情况</p>
+                    <div class="radio">
+                        <span>优</span><span>良</span><span>中</span><span>差</span>
+                    </div>
+                    <p>3.2实习成果情况</p>
+                    <div class="radio">
+                        <span>优</span><span>良</span><span>中</span><span>差</span>
+                    </div>
+                    <p>3.3技能提升情况</p>
+                    <div class="radio">
+                        <span>优</span><span>良</span><span>中</span><span>差</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <span class="btn_rating">评价</span>
+    </section>
+
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+</body>
+</html>

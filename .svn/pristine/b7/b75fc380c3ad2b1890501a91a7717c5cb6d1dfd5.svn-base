@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-学生签到</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle info_subtitle">学生签到</p>
+        <div class="menu">
+            <ul class="menu_list">
+                <li class="class_active">计算机应用技术1班</li>
+                <li>计算机应用技术2班</li>
+                <li>计算机应用技术3班</li>
+                <li>商务英语1班</li>
+                <li>商务英语2班</li>
+            </ul>
+        </div>
+        <div class="bg_fff">
+        	<div class="num_statistics">
+		        <span class="">人数</span>
+		        <span>
+		            <span class="all_numW">
+		                <span class="proportion_numW">
+		                    <b class="proportion_people">15人</b>
+		                </span>
+		            </span>
+		            <b class="all_people">30人</b>
+		        </span>
+		    </div>
+		    <table class="signIn_table">
+		    	<tr>
+		    		<th>姓名</th>
+		    		<th>签到</th>
+		    	</tr>
+		    	<tr>
+		    		<td>
+		    			<img src="../img/girl.png" alt="女孩" />
+		    			张清怡
+		    		</td>
+		    		<td>
+		    			<img src="../img/i_yesSignIn.png" alt="已签到" />
+		    		</td>
+		    	</tr>
+		    	<tr class="bg_gray">
+		    		<td>
+		    			<img src="../img/boy.png" alt="男孩" />
+		    			张清
+		    		</td>
+		    		<td>
+		    			<img src="../img/i_noSignIn.png" alt="未签到" />
+		    		</td>
+		    	</tr>
+		    	<tr>
+		    		<td>
+		    			<img src="../img/boy.png" alt="男孩" />
+		    			李晓
+		    		</td>
+		    		<td>
+		    			<img src="../img/i_yesSignIn.png" alt="已签到" />
+		    		</td>
+		    	</tr>
+		    	<tr class="bg_gray">
+		    		<td>
+		    			<img src="../img/girl.png" alt="女孩" />
+		    			程晓小
+		    		</td>
+		    		<td>
+		    			<img src="../img/i_noSignIn.png" alt="未签到" />
+		    		</td>
+		    	</tr>
+		    	<tr>
+		    		<td>
+		    			<img src="../img/boy.png" alt="男孩" />
+		    			李盛
+		    		</td>
+		    		<td>
+		    			<img src="../img/i_yesSignIn.png" alt="已签到" />
+		    		</td>
+		    	</tr>
+		    </table>
+        </div>
+        
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/teacherJs/signInStudentPage.js"></script>
+</body>
+</html>

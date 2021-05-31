@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-积分详情</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral" href="javascript:volid(0);" disabled>
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <div class="map_box">
+            <p>每日积分情况</p>
+            <div id="chart_member"></div>
+        </div>
+        <div class="fCentre integral_box">
+            <p class="subtitle">积分记录 <i class="i_explain"></i></p>
+            <div class="integral_title">
+                <span>时间</span>
+                <span>分值</span>
+            </div>
+            <ul>
+                <li>
+                    <div class="total_integral">
+                        <span>11-15</span>
+                        <span>15</span>
+                        <span><i class="i_bArrows"></i></span>
+                    </div>
+                    <div class="integral_info on">
+                        <i class="i_topArrows"></i>
+                        <ul>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>10</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="total_integral bg_darkGrey">
+                        <span>11-14</span>
+                        <span>15</span>
+                        <span><i class="i_tArrows"></i></span>
+                    </div>
+                    <div class="integral_info hide">
+                        <i class="i_topArrows"></i>
+                        <ul>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>10</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="total_integral">
+                        <span>11-13</span>
+                        <span>15</span>
+                        <span><i class="i_tArrows"></i></span>
+                    </div>
+                    <div class="integral_info hide">
+                        <i class="i_topArrows"></i>
+                        <ul>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>10</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="total_integral bg_darkGrey">
+                        <span>11-12</span>
+                        <span>15</span>
+                        <span><i class="i_tArrows"></i></span>
+                    </div>
+                    <div class="integral_info hide">
+                        <i class="i_topArrows"></i>
+                        <ul>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>10</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="total_integral">
+                        <span>11-11</span>
+                        <span>15</span>
+                        <span><i class="i_tArrows"></i></span>
+                    </div>
+                    <div class="integral_info hide">
+                        <i class="i_topArrows"></i>
+                        <ul>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <span>14:33</span>
+                                <span>登录</span>
+                                <span>10</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--积分说明弹窗-->
+    <div class="popup integrationRule_popup">
+        <div class="mask"></div>
+        <div class="popup_box">
+            <div>
+                <div class="popup_header">
+                    <h2>积分规则</h2>
+                    <i class="i_popupClose"></i>
+                </div>
+                <div class="popup_section">
+                   <ul class="integrationRule_list">
+                       <li>
+                           <span>操作</span>
+                           <span>分数</span>
+                           <span>积分规则</span>
+                       </li>
+                       <li>
+                           <span>登录</span>
+                           <span>5分</span>
+                           <span>1天只计算一次</span>
+                       </li>
+                       <li>
+                           <span>签到</span>
+                           <span>5分</span>
+                           <span>1天只计算一次</span>
+                       </li>
+                       <li>
+                           <span>查看通知公告</span>
+                           <span>5分</span>
+                           <span>1条只计算一次</span>
+                       </li>
+                       <li>
+                           <span>写日报</span>
+                           <span>10分</span>
+                           <span>1篇只计算一次</span>
+                       </li>
+                       <li>
+                           <span>写月报</span>
+                           <span>10分</span>
+                           <span>1篇只计算一次</span>
+                       </li>
+                       <li>
+                           <span>留言</span>
+                           <span>10分</span>
+                           <span>1篇只计算一次</span>
+                       </li>
+                       <li>
+                           <span>评价校内指导老师</span>
+                           <span>15分</span>
+                           <span>1人只计算一次</span>
+                       </li>
+                       <li>
+                           <span>评价校外指导老师</span>
+                           <span>15分</span>
+                           <span>1人只计算一次</span>
+                       </li>
+                       <li>
+                           <span>评价实习企业</span>
+                           <span>15分</span>
+                           <span>1人只计算一次</span>
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/plugin/echarts.min.js"></script>
+<script src="../js/commonJs/integral.js"></script>
+</body>
+</html>

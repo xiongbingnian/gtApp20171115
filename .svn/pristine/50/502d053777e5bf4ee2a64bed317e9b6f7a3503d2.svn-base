@@ -1,0 +1,105 @@
+/**
+ * serverUrl app接口服务器地址
+ */
+var serverUrl = 'http://192.168.49.204:8080/gt_app_interface';
+var CommonUtils = cu = {
+	get : function(options) {
+		options.type = "GET";
+		options.async = true;
+		return this.ajax(options)
+	},
+	post : function(options) {
+		options.type = "POST";
+		options.async = true;
+		return this.ajax(options)
+	},
+	submit : function(options) {
+		if (!options.url) {
+			throw new Error("CommonUtils.submit：提交表单必须设定url")
+		}
+		var form = options.form;
+		if (lu.isEmpty(form)) {
+			throw new Error("CommonUtils.submit：没有表单对象");
+			return
+		}
+		/*if (options.ignoreValid !== true) {
+			var firstErrorObj = cu.validForm(form);
+			if (firstErrorObj) {
+				try {
+					firstErrorObj.focus()
+				} catch (e) {
+				}
+				var hintTarget = form.height() < $(window).height() ? form
+						: null;
+				cu.hint(options.validText || "表单验证不通过", "warn", hintTarget);
+				return
+			}
+		}*/
+		if (lu.isFn(options.before)) {
+			if (options.before.call(options.context, form) === false)
+				return
+		}
+		var data = form.serialize();
+		if (options.data) {
+			data += "&" + $.param(options.data, true)
+		}
+		options.data = data;
+		options.form = form;
+		if (!options.type)
+			options.type = "POST";
+		if (this._submittedUrls[options.url]) {
+			log("重复提交表单：" + options.url);
+			return
+		}
+		this._submittedUrls[options.url] = true;
+		lu.timeout(function() {
+			delete this._submittedUrls[options.url]
+		}, 500, this);
+		return this.ajax(options)
+	},
+	ajax : function(options) {
+		if (!options || !options.url) {
+			throw new Error("发送ajax请求之前请先设置url。")
+		}
+		if (lu.isEmpty(options.cache))
+			options.cache = false;
+		if (lu.isNotEmpty(au.getTokenInfo())){
+			if(lu.isEmpty(options.data)){
+				lu.applyIf(options, {
+					data: {token : au.getTokenInfo()}
+				});
+			}else{
+				if(lu.isStr(options.data)){
+					options.data = options.data + "&token=" +au.getTokenInfo(); 
+				}else{
+					lu.applyIf(options.data, {token : au.getTokenInfo()});
+				}
+			}
+		}
+		return mui.ajax(serverUrl + options.url, options);
+	},
+	sync : function(options) {
+		if (lu.isStr(options)) {
+			options = {
+				url : options
+			}
+		}
+		var result = null;
+		options.async = false;
+		options.success = function(data) {
+			result = data
+		};
+		if (lu.isEmpty(options.cache))
+			options.cache = false;
+		this.ajax(options);
+		return result
+	},
+	_submittedUrls : {}
+};
+var log = function(obj) {
+	if (typeof console === "undefined") {
+		alert(obj)
+	} else {
+		console.log(obj)
+	}
+};

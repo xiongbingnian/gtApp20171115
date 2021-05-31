@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-日报点评</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle rating_subtitle"><i class="i_yesSignIn"></i>3-13 日报</p>
+        <div class="remarkOn_box">
+            <p>日报评分 <i class="i_yellowStar"></i><i class="i_yellowStar"></i><i class="i_yellowStar"></i><i class="i_yellowStar"></i><i class="i_grayStar"></i></p>
+            <p>教师点评：<b>良好</b></p>
+        </div>
+        <div class="writeContent_box">
+            <p>这次的实习经历让我收获了很多，不仅是新闻写作上的经验，还有如何与人沟通的能力上，而且还收获了几个很好的老师能为我以后的新闻写作提出建议。这个实习真的过的很有意义。</p>
+            <div class="margin_left">
+                <div class="imgVideo_box">
+                    <img src="../img/logIn_bg.png" >
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/studentJs/daily.js"></script>
+</body>
+</html>

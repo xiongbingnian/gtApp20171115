@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-实习信息</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section id="info">
+        <!--<p class="subtitle info_subtitle">实习信息 <a class="enteringInfo"><i class="i_newAdd"></i></a></p>
+        <ul class="newInfo_list">
+            <li>
+                <span><label>实习单位：</label>广州比邦塑胶厂</span>
+                <span class="right info_date">03-16</span>
+            </li>
+            <li>
+                <span><label>工作地点：</label>广州</span>
+            </li>
+            <li>
+                <span><label>实习岗位：</label>销售助理</span>
+                <div class="btnCompile_box">
+                    <a class="enteringInfo btn_compile">编辑</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="oldInfo_list">
+            <li>
+                <span><label>实习单位：</label>广州比邦塑胶厂</span>
+                <span class="right info_date">03-16</span>
+            </li>
+            <li>
+                <span><label>工作地点：</label>广州</span>
+            </li>
+            <li>
+                <span><label>实习岗位：</label>销售助理</span>
+            </li>
+        </ul>
+        <ul class="oldInfo_list">
+            <li>
+                <span><label>实习单位：</label>广州比邦塑胶厂</span>
+                <span class="right info_date">03-16</span>
+            </li>
+            <li>
+                <span><label>工作地点：</label>广州</span>
+            </li>
+            <li>
+                <span><label>实习岗位：</label>销售助理</span>
+            </li>
+        </ul>-->
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/commonJs/common.js"></script>
+<script src="../js/commonJs/AppUtils.js"></script>
+<script src="../js/commonJs/CommonUtils.js"></script>
+<script src="../js/commonJs/LangUtils.js"></script>
+<script src="../js/studentJs/info.js"></script>
+</body>
+</html>

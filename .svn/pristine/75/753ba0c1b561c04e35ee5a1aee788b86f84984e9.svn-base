@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-学生首页</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="head_box">
+            <img class="img_head" src="../img/studentHead.png" alt="">
+            <span class="btn_exit">退出</span>
+        </div>
+        <div class="info_box">
+            <div>
+                <span>
+                    <b class="student_name">谢会如</b>
+                </span>
+                <a class="right integral">
+                    <span>50</span>
+                </a>
+            </div>
+            <ul class="studentInfo_list">
+                <li>班级：13级人文学1班</li>
+                <li>实习课程：人文学实习课程1</li>
+                <li>指导老师： <a class="teacher_name" href="javascript:;">张曼玉</a></li>
+                <li>实习成绩：无</li>
+            </ul>
+        </div>
+        <div class="queryLocation_box">
+            <a id="myQuery">
+                <i class="i_query"></i>
+                <b class="redDot_query"></b>
+            </a>
+        </div>
+        <div class="location_box">
+            <span class="btn_signIn">签到</span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <p class="remind"><a href="javascript:;"><i class="i_remind"></i> <span class="remind_content">您当前还没有录入实习信息，请录入实习信息</span></a><i class="i_close"></i></p>
+    <section>
+        <div class="module_box">
+            <p  class="inform"><span class="subtitle">通知公告</span> <a><i class="i_allSubtitle"></i></a></p>
+            <div class="inform_box">
+                <ul class="inform_list">
+                    <li class="inform"><a><span class="subtitle_title">【3.1】关于本学期顶岗实习教学计划的通知</span></a></li>
+                    <li class="inform"><a><span class="subtitle_title">【3.1】关于本学期顶岗实习教学计划的通知</span></a></li>
+                    <li class="inform"><a><span class="subtitle_title">【3.1】关于本学期顶岗实习教学计划的通知</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="module_box">
+            <p><span class="subtitle">我的日常</span></p>
+            <ul class="menu_list">
+                <li>
+                    <a class="signIn" id="signIn">
+                        <i class="i_signIn"></i>
+                        <div>签到</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="daily">
+                        <i class="i_daily"></i>
+                        <div>日报</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="weekly">
+                        <i class="i_weekly"></i>
+                        <div>周报</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="monthly">
+                        <i class="i_monthly"></i>
+                        <div>月报</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="recruit">
+                        <i class="i_recruit"></i>
+                        <div>实习招聘</div>
+                        <b class="num">99+</b>
+                    </a>
+                </li>
+                <li>
+                    <a id="info">
+                        <i class="i_info"></i>
+                        <div>实习信息</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="decisionTable">
+                        <i class="i_decisionTable"></i>
+                        <div>实习鉴定表</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="myRating">
+                        <i class="i_evaluate"></i>
+                        <div>我的评价</div>
+                    </a>
+                </li>
+                <li>
+                    <a id="myMessage">
+                        <i class="i_messageBoard"></i>
+                        <div>留言板</div>
+                        <b class="num">1</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <img class="banner" src="../img/banner.png" alt="">
+    </section>
+    <footer>
+        <p>2016©广州轩辕云岗信息科技有限公司 </p>
+    </footer>
+    <!--退出登录弹窗-->
+    <div class="popup exit_popup">
+        <div class="mask"></div>
+        <div class="exit_box">
+            <a id="logIn"><span class="btn_logOut">退出登录</span></a>
+            <span class="btn_cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/AppUtils.js"></script>
+<script src="../js/CommonUtils.js"></script>
+<script src="../js/LangUtils.js"></script>
+<script src="../js/studentJs/index.js"></script>
+</body>
+</html>

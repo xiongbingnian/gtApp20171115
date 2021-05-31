@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-登录</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/logIn.css">
+</head>
+<body>
+    <div class="container">
+        <img class="logIn_bg" src="./img/logIn_bg.png" alt="">
+        <div class="logIn_section">
+            <form action="">
+                <div class="school_box">
+                    <input class="school"  placeholder="请输入您的学校">
+                    <!--<ul class="school_list">
+                        <li>111</li>
+                        <li>2222</li>
+                    </ul>-->
+                </div>
+                <div class="school_box">
+                    <input class="account" type="text" placeholder="请输入您的账号">
+                    <!--<ul class="school_list">
+                        <li>student</li>
+                        <li>teacher</li>
+                    </ul>-->
+                </div>
+                <input class="password"  type="password" placeholder="请输入您的密码">
+                <button type="button" id="btn_logIn" class="btn_logIn">登录</button>
+            </form>
+        </div>
+    </div>
+<script src="./js/plugin/jquery-1.11.3.min.js"></script>
+<script src="./js/plugin/mui.js"></script>
+<script src="js/commonJs/common.js"></script>
+<script src="js/commonJs/AppUtils.js"></script>
+<script src="js/commonJs/CommonUtils.js"></script>
+<script src="js/commonJs/LangUtils.js"></script>
+<script src="js/commonJs/logIn.js"></script>
+</body>
+</html>

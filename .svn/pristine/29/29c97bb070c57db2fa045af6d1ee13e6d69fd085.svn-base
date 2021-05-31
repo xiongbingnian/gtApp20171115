@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微信实习工场-学生日报</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+<body class="bg_gray">
+<div class="container">
+    <header>
+        <div class="fold_head">
+            <i class="i_return  mui-action-back"></i>
+            <a class="right integral">
+                <span>50</span>
+            </a>
+            <span class="right"><i class="i_teacher"></i><b class="redDot_tR"></b></span>
+            <span class="right"><i class="i_headQuery"></i><b class="redDot_tR"></b></span>
+        </div>
+        <span class="awarded_marks">+5</span>
+    </header>
+    <section>
+        <p class="subtitle weekly_subtitle">
+        	<span>学生日报</span>
+        	<span class="subtitle_class">计算机应用技术1班</span>
+        	<span class="font_1 right">3-27</span>
+        </p>
+        <ul class="weeklyStatistics_list">
+            <li>
+                <b class="statistics_num">30</b>
+                <div>应写</div>
+            </li>
+            <li>
+                <b class="statistics_num">12</b>
+                <div>已写</div>
+            </li>
+            <li>
+                <b class="statistics_num">18</b>
+                <div>未写</div>
+            </li>
+        </ul>
+        <table class="weekly_table">
+            <tr>
+                <th>姓名</th>
+                <th>提交时间</th>
+                <th>评价</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>02-03 10:00</td>
+                <td><b class="excellent">优</b></td>
+                <td><a class="studentDailyPage_1"><span class="btn_operation">修改</span></a></td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>未提交</td>
+                <td>/</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>02-17 10:00</td>
+                <td><b class="poor">差</b></td>
+                <td><a class="studentDailyPage_1"><span class="btn_operation">修改</span></a></td>
+            </tr>
+            <tr>
+                <td>王六</td>
+                <td>02-24 10:00</td>
+                <td><b class="fair">中</b></td>
+                <td><a class="studentDailyPage_1"><span class="btn_operation">修改</span></a></td>
+            </tr>
+            <tr>
+                <td>李七</td>
+                <td>03-03 10:00</td>
+                <td><b class="good">良</b></td>
+                <td><a class="studentDailyPage_1"><span class="btn_operation">修改</span></a></td>
+            </tr>
+            <tr>
+                <td>张八</td>
+                <td>03-10 10:00</td>
+                <td>/</td>
+                <td><a class="studentDailyPage_1"><span class="btn_operation">评审</span></a></td>
+            </tr>
+            <tr>
+                <td>李九</td>
+                <td>03-17 10:00</td>
+                <td>/</td>
+                <td><a class="studentDailyPage_1"><span class="btn_operation">评审</span></a></td>
+            </tr>
+            <tr>
+                <td>王十</td>
+                <td>未提交</td>
+                <td>/</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>张一</td>
+                <td>未提交</td>
+                <td>/</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>李二</td>
+                <td>未提交</td>
+                <td>/</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>王三</td>
+                <td>未提交</td>
+                <td>/</td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+</div>
+<script src="../js/plugin/jquery-1.11.3.min.js"></script>
+<script src="../js/plugin/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/teacherJs/studentDailyPage.js"></script>
+</body>
+</html>

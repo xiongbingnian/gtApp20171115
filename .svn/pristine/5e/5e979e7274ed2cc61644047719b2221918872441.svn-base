@@ -1,0 +1,26 @@
+mui.ready(function() {
+	cu.post({
+		url: '/common/notice/all',
+		success: function(data) {
+			$('.informPage_list').append(template("tpl-notice", {
+				notices: data.result
+			}));
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				var noticeId = self.noticeId;
+				
+				if (noticeId) {
+					mui.trigger($('.inform_title[data-notice-id=' + noticeId + ']')[0], 'tap');
+				}
+			});
+		}
+	});
+	
+	$('.informPage_list').on('tap', '.inform_title', function() {
+		var noticeId = $(this).data('notice-id');
+		cu.post({
+			url: 'common/notice/view',
+			data: { noticeId: noticeId}
+		});
+	});
+});

@@ -1,0 +1,129 @@
+var FileUpload = fu = {
+	loadAttachments : function(options){
+		if (!options.rowId){
+			if (options.onLoad) {
+				options.onLoad.call(this, null);
+			}
+			this.checkNoAttach();
+			return;
+		}
+		cu.get({
+			url: 'sys/attach/findAttachments',
+			data: {
+				type: options.type, 
+				rowId: options.rowId
+			},
+			success: function(attachments){
+				//触发onLoad
+				if (options.onLoad){
+					options.onLoad.call(this, attachments);
+				}
+				lu.each(attachments, function(i, attach){
+					this.createAttachUi(attach);
+				}, this);
+				this.checkNoAttach();
+			},
+			context: this
+		});
+	},
+	
+	uploadFile : function (file, options){
+		if (options.beforeUpload){
+			if (options.beforeUpload.call(this, file) === false) return;
+		}
+		console.log(au.getTokenInfo());
+		//添加id标识
+	//	file.id = ++ this.fileId;
+		//创建上传界面
+	//	this.createUploadingUi(file);
+		//开始上传，并记住xhr对象，以便取消上传
+		var xhr = cu.post2({
+			url: cu.getServerUrl()+'sys/attach/upload',
+			data: {
+				type: options.type,
+				rowId: options.syncUpdate && options.rowId || '',
+				fileType: file.type,
+				file: file,
+				token: au.getTokenInfo()
+			},
+			/*onProgress: function(percent) {
+				this.uploadProgress(file.id, percent);
+			},*/
+			success: function(attach) {
+				log(attach);
+				/*if (this.isDestroyed) return;
+				this.uploadSuccess(file, attach);
+				delete this.uploadingXhrs[file.id];*/
+			},
+			error: function(err) {
+				if (this.isDestroyed) return false;
+				if (err.type) {
+					this.uploadError(file, err.type, err.message);
+				} else { //取消上传和上传目录时的出错消息都是{status:0}
+					if (!this._clickCancelBtn) {
+						cu.error('不能上传目录或空文件');
+					}
+					this._clickCancelBtn = false;
+				}
+				this.doCancelUpload(this, file.id);
+				delete this.uploadingXhrs[file.id];
+				return false;
+			}/*,
+			context: this*/
+		});
+		/*this.uploadingXhrs[file.id] = xhr;*/
+	},
+	readFile : function (file) {
+		console.log(file);
+		if (file.type.indexOf('image') < 0) {
+//			Common.showWarning('只能上传图片');
+			return;
+		}
+		if (file.type.indexOf('image/gif') > 0)
+			return;
+		var reader = new FileReader();
+		reader.readAsDataURL(file);
+		reader.onload = function() {
+			/*if (img_container.text().trim() == '暂无图片') {
+				img_container.empty();
+			}*/
+			var _img_ = new Image();
+			_img_.src = this.result;
+			var tmph = _img_.height;
+			var tmpw = _img_.width;
+			var isHengTu = tmpw > tmph;
+			var max = Math.max(tmpw, tmph);
+			var min = Math.min(tmpw, tmph);
+			var bili = min / max;
+			if (max > 1200) {
+				max = 1200;
+				min = Math.floor(bili * max);
+			}
+			tmph = isHengTu ? min : max;
+			tmpw = isHengTu ? max : min;
+			_img_.style.border = "1px solid rgb(200,199,204)";
+			_img_.style.margin = "10px";
+			_img_.style.width = "150px";
+			_img_.style.height = "150px";
+			if (tmph == '' || tmpw == '') {
+				tmpw = 640;
+			}
+			canvasResize(file, {
+				width : tmpw,
+				height : tmph,
+				crop : false,
+				quality : 50,
+				rotate : 0,
+				callback : function(data) {
+					console.info("canvasResize:" + data);
+					var img = document.createElement('img');
+					img.src = data;
+					img.dataset.name = file.name;
+//					img_container.append(img);
+				}
+			});
+
+		}
+
+	}
+}
